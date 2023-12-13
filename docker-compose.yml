@@ -3,5 +3,7 @@ version: "3"
 services:
   web:
     build: .
+    container_name: flask-auth-system-container
+    image: flask-auth-system-image
     ports:
       - "3000:3000"

@@ -14,11 +14,11 @@ A simple auth system built with Python & Flask
 flask run
 ```
 
-#### Using docker
+#### Using docker compose
 
 ```sh
 # Build image
-docker build -t flask-auth-system .
+docker compose build
 
 # Run
 docker compose up -d
