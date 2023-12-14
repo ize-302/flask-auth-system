@@ -11,7 +11,7 @@ A simple auth system built with Python & Flask
 #### Run app - Great for development
 
 ```sh
-flask run
+flask run --debug
 ```
 
 #### Using docker compose
