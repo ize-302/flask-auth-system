@@ -5,5 +5,25 @@ services:
     build: .
     container_name: flask-auth-system-container
     image: flask-auth-system-image
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - SQLALCHEMY_DATABASE_URI=${SQLALCHEMY_DATABASE_URI}
     ports:
       - "3000:3000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    container_name: psql
+    environment:
+      POSTGRES_USER: ozorku
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: flask_auth_system_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

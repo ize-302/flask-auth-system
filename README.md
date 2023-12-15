@@ -23,3 +23,14 @@ docker compose build
 # Run
 docker compose up -d
 ```
+
+Features
+
+- Registration
+- Login support
+- Change password
+- User information
+
+To fix
+
+- Docker compose not starting up, somehow app attribute isn't found
